@@ -19,7 +19,7 @@ export default function Contact() {
         <h2 className="contact-heading">Let's work together.</h2>
         <p className="contact-sub">
           Open to senior engineering and technical leadership roles.<br />
-          Remote · India · 30–45 day notice
+          Remote · India
         </p>
 
         <a className="contact-email" href="mailto:mahajan.tarun1990@gmail.com">
