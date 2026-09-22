@@ -1,5 +1,11 @@
-import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 16 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-60px' },
+  transition: { duration: 0.45, delay },
+})
 import './Trajectory.css'
 
 const ROLES = [
@@ -46,16 +52,10 @@ const ROLES = [
 ]
 
 function RoleCard({ item, index }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-80px' })
-
   return (
     <motion.div
-      ref={ref}
       className="role-card"
-      initial={{ opacity: 0, x: -20 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
+      {...fadeUp(index * 0.06)}
     >
       <div className="role-period">{item.period}</div>
       <div className="role-body">
@@ -74,17 +74,11 @@ function RoleCard({ item, index }) {
 }
 
 export default function Trajectory() {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-100px' })
-
   return (
     <section id="trajectory" className="trajectory section-pad">
       <motion.div
-        ref={ref}
         className="section-header"
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5 }}
+        {...fadeUp()}
       >
         <span className="section-num">01</span>
         <h2>Where I am now,<br />and how I got here.</h2>

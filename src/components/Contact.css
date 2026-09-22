@@ -1,42 +1,41 @@
 .contact {
   text-align: center;
+  background: var(--bg-alt);
 }
 
 .contact-inner {
-  max-width: 600px;
+  max-width: 560px;
   margin: 0 auto;
 }
 
 .contact-heading {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1;
-  margin-bottom: 1.25rem;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 1rem;
 }
 
 .contact-sub {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.7;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .contact-email {
   display: inline-block;
-  font-family: var(--font-display);
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-size: 1rem;
   color: var(--accent);
   border-bottom: 1px solid var(--accent);
-  padding-bottom: 0.2rem;
-  margin-bottom: 2rem;
+  padding-bottom: 0.15rem;
+  margin-bottom: 1.75rem;
   transition: opacity 0.2s;
 }
 
-.contact-email:hover {
-  opacity: 0.7;
-}
+.contact-email:hover { opacity: 0.7; }
 
 .contact-links {
   display: flex;
@@ -45,13 +44,11 @@
 }
 
 .contact-links a {
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  letter-spacing: 0.07em;
   color: var(--muted);
   text-transform: uppercase;
   transition: color 0.2s;
 }
 
-.contact-links a:hover {
-  color: var(--white);
-}
+.contact-links a:hover { color: var(--text); }

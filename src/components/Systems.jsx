@@ -1,5 +1,12 @@
-import { useRef, useState } from 'react'
-import { motion, useInView, AnimatePresence } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 16 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-60px' },
+  transition: { duration: 0.45, delay },
+})
 import './Systems.css'
 
 const PROJECTS = [
@@ -52,16 +59,10 @@ const PROJECTS = [
 
 function ProjectCard({ p, index }) {
   const [open, setOpen] = useState(false)
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-60px' })
-
   return (
     <motion.div
-      ref={ref}
       className="project-card"
-      initial={{ opacity: 0, y: 30 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
+      {...fadeUp(index * 0.07)}
     >
       <button className="project-toggle" onClick={() => setOpen(o => !o)}>
         <div className="project-top">
@@ -103,17 +104,11 @@ function ProjectCard({ p, index }) {
 }
 
 export default function Systems() {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-100px' })
-
   return (
     <section id="systems" className="systems section-pad">
       <motion.div
-        ref={ref}
         className="section-header"
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5 }}
+        {...fadeUp()}
       >
         <span className="section-num">02</span>
         <h2>Five systems,<br />and what was hard about each.</h2>

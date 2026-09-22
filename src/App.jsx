@@ -38,8 +38,8 @@ export default function App() {
   return (
     <>
       <Nav sections={SECTIONS} active={active} />
+      <Hero />
       <main>
-        <Hero />
         <Trajectory />
         <Systems />
         <Substrate />

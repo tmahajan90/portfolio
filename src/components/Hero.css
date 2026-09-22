@@ -1,80 +1,163 @@
 .hero {
-  position: relative;
+  background: var(--bg);
+  background-image: radial-gradient(circle, #252525 1px, transparent 1px);
+  background-size: 28px 28px;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding-top: 4rem;
+  align-items: flex-start;
+  padding-top: 4.5rem;
 }
 
-.hero-canvas {
-  position: absolute;
-  inset: 0;
+.hero-inner {
   width: 100%;
-  height: 100%;
-  pointer-events: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  padding: 4rem 0;
-}
-
+/* ── Eyebrow ── */
 .hero-eyebrow {
-  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
-  color: var(--accent);
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
 }
 
-.hero-name {
-  font-family: var(--font-display);
-  font-size: clamp(4rem, 12vw, 10rem);
-  font-weight: 700;
+.hero-role {
+  color: var(--accent);
+}
+
+.hero-sep {
+  color: #777;
+}
+
+.hero-domains {
+  color: #cccccc;
+}
+
+/* ── Name block ── */
+.hero-name-block {
+  margin-bottom: 3rem;
   line-height: 0.9;
-  letter-spacing: -0.02em;
-  color: var(--white);
-  margin-bottom: 2rem;
+  letter-spacing: -0.035em;
+}
+
+.hero-first {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 11vw, 9.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 0.1em;
+}
+
+.hero-second-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-photo-placeholder {
+  width: clamp(72px, 8vw, 118px);
+  height: clamp(72px, 8vw, 118px);
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #12192a;
+  border: 2px solid rgba(96, 165, 250, 0.35);
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: clamp(0.95rem, 2vw, 1.75rem);
+  font-weight: 700;
+  color: #4a6fa5;
+  letter-spacing: 0.05em;
+}
+
+.hero-photo {
+  width: clamp(72px, 8vw, 118px);
+  height: clamp(72px, 8vw, 118px);
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(96, 165, 250, 0.35);
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.08);
+}
+
+.hero-last {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 11vw, 9.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.035em;
+}
+
+/* ── Bottom ── */
+.hero-divider {
+  width: 48px;
+  height: 1px;
+  background: var(--accent);
+  margin-bottom: 1.75rem;
+  opacity: 0.6;
+}
+
+.hero-bottom {
+  max-width: 660px;
+}
+
+.hero-tags-mono {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 2.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero-tag-mono {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: #cccccc;
+  text-transform: uppercase;
 }
 
 .hero-tagline {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: var(--muted);
-  max-width: 520px;
-  line-height: 1.5;
-  margin-bottom: 2rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  font-weight: 600;
+  color: #e8e8e8;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
 }
 
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.tag {
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
+.hero-desc {
+  font-size: 0.9rem;
   color: var(--muted);
-  border: 1px solid var(--border);
-  padding: 0.3rem 0.75rem;
-  border-radius: 100px;
+  line-height: 1.8;
+  margin-bottom: 2.25rem;
 }
 
 .hero-cta {
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--accent);
-  border: 1px solid var(--accent);
-  padding: 0.7rem 1.4rem;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
+  border: 1px solid rgba(96, 165, 250, 0.4);
+  padding: 0.7rem 1.6rem;
+  border-radius: 2px;
+  background: transparent;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .hero-cta:hover {
   background: var(--accent);
-  color: var(--black);
+  border-color: var(--accent);
+  color: #0d0d0d;
 }

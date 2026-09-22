@@ -33,6 +33,9 @@ export default function Contact() {
           <a href="https://github.com/tmahajan90" target="_blank" rel="noopener noreferrer">
             GitHub ↗
           </a>
+          <a href="/portfolio/resume.pdf" target="_blank" rel="noopener noreferrer">
+            Résumé ↗
+          </a>
         </div>
       </motion.div>
     </section>

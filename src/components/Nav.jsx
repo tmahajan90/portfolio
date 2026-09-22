@@ -25,14 +25,32 @@ export default function Nav({ sections, active }) {
           ))}
         </ul>
       </nav>
-      <a
-        className="nav-resume"
-        href="https://www.linkedin.com/in/tmahajan90/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn ↗
-      </a>
+      <div className="nav-links">
+        <a
+          className="nav-link"
+          href="https://www.linkedin.com/in/tmahajan90/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn ↗
+        </a>
+        <a
+          className="nav-link"
+          href="https://github.com/tmahajan90"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub ↗
+        </a>
+        <a
+          className="nav-link nav-link-accent"
+          href="/portfolio/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Résumé ↗
+        </a>
+      </div>
     </header>
   )
 }

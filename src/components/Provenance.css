@@ -5,49 +5,45 @@
 }
 
 .provenance-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
 }
 
 .provenance-item {
   display: flex;
   gap: 0.75rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.1rem;
 }
 
 .provenance-title {
   display: block;
-  font-size: 0.9rem;
-  color: var(--white);
+  font-size: 0.875rem;
+  color: var(--text);
   line-height: 1.4;
 }
 
 .provenance-meta {
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--muted);
   margin-top: 0.2rem;
 }
 
 .provenance-award {
-  color: var(--accent);
-  font-size: 1rem;
+  color: #f59e0b;
+  font-size: 0.9rem;
   flex-shrink: 0;
   margin-top: 0.1rem;
 }
 
 @media (max-width: 900px) {
-  .provenance-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
+  .provenance-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
 
 @media (max-width: 560px) {
-  .provenance-grid {
-    grid-template-columns: 1fr;
-  }
+  .provenance-grid { grid-template-columns: 1fr; }
 }

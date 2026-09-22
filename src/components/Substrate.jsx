@@ -1,5 +1,12 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 16 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-60px' },
+  transition: { duration: 0.45, delay },
+})
 import './Substrate.css'
 
 const STACK = [
@@ -42,15 +49,10 @@ const STACK = [
 ]
 
 function SubstrateGroup({ group, index }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-60px' })
   return (
     <motion.div
-      ref={ref}
       className="substrate-group"
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.07 }}
+      {...fadeUp(index * 0.06)}
     >
       <h3 className="substrate-category">{group.category}</h3>
       <ul>
@@ -63,17 +65,11 @@ function SubstrateGroup({ group, index }) {
 }
 
 export default function Substrate() {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-100px' })
-
   return (
     <section id="substrate" className="substrate section-pad">
       <motion.div
-        ref={ref}
         className="section-header"
-        initial={{ opacity: 0, y: 20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5 }}
+        {...fadeUp()}
       >
         <span className="section-num">03</span>
         <h2>What the systems<br />are made of.</h2>

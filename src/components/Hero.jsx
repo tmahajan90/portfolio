@@ -1,110 +1,62 @@
-import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import photo from '../assets/photo.jpg'
 import './Hero.css'
 
 export default function Hero() {
-  const canvasRef = useRef(null)
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    const ctx = canvas.getContext('2d')
-    let animId
-    let particles = []
-
-    const resize = () => {
-      canvas.width = canvas.offsetWidth
-      canvas.height = canvas.offsetHeight
-    }
-    resize()
-    window.addEventListener('resize', resize)
-
-    for (let i = 0; i < 60; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r: Math.random() * 1.5 + 0.3,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        alpha: Math.random() * 0.5 + 0.1,
-      })
-    }
-
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
-      particles.forEach(p => {
-        p.x += p.vx
-        p.y += p.vy
-        if (p.x < 0) p.x = canvas.width
-        if (p.x > canvas.width) p.x = 0
-        if (p.y < 0) p.y = canvas.height
-        if (p.y > canvas.height) p.y = 0
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(200, 241, 53, ${p.alpha})`
-        ctx.fill()
-      })
-      animId = requestAnimationFrame(draw)
-    }
-    draw()
-
-    return () => {
-      cancelAnimationFrame(animId)
-      window.removeEventListener('resize', resize)
-    }
-  }, [])
-
   return (
     <section id="hero" className="hero">
-      <canvas ref={canvasRef} className="hero-canvas" aria-hidden />
+      <div className="hero-inner">
+        <div className="hero-eyebrow">
+          <span className="hero-role">Technical Lead &amp; Full-Stack Engineer</span>
+          <span className="hero-sep">/</span>
+          <span className="hero-domains">Ruby on Rails · Angular · Microservices · AWS</span>
+        </div>
 
-      <div className="hero-content">
+        <div className="hero-name-block">
+          <motion.div
+            className="hero-first"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+          >
+            TARUN
+          </motion.div>
+          <motion.div
+            className="hero-second-row"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            <img src={photo} alt="Tarun Mahajan" className="hero-photo" />
+            <span className="hero-last">MAHAJAN</span>
+          </motion.div>
+        </div>
+
+        <div className="hero-divider" />
         <motion.div
-          className="hero-eyebrow"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Technical Lead · Full-Stack Engineer · 12+ Years Experience
-        </motion.div>
-
-        <motion.h1
-          className="hero-name"
+          className="hero-bottom"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
         >
-          TARUN<br />MAHAJAN
-        </motion.h1>
-
-        <motion.p
-          className="hero-tagline"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.55 }}
-        >
-          Accomplished Technical Lead specialising in Ruby on Rails, Angular, Microservices, and Cloud Architecture — building scalable, high-performance systems.
-        </motion.p>
-
-        <motion.div
-          className="hero-tags"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.75 }}
-        >
-          {['Ruby on Rails', 'Angular', 'Microservices', 'AWS', 'GraphQL', 'Docker', 'Team Lead'].map(tag => (
-            <span key={tag} className="tag">{tag}</span>
-          ))}
+          <div className="hero-tags-mono">
+            {['Ruby on Rails', 'Angular', 'Microservices', 'AWS', 'GraphQL', 'Docker', 'Team Lead'].map(t => (
+              <span key={t} className="hero-tag-mono">{t}</span>
+            ))}
+          </div>
+          <h2 className="hero-tagline">
+            I build the systems that connect teams, data, and products.
+          </h2>
+          <p className="hero-desc">
+            Accomplished Technical Lead with 12+ years delivering scalable full-stack platforms — from EHR systems and investment platforms to SaaS marketing suites serving tens of thousands of businesses globally.
+          </p>
+          <button
+            className="hero-cta"
+            onClick={() => document.getElementById('trajectory')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            See my work ↓
+          </button>
         </motion.div>
-
-        <motion.button
-          className="hero-cta"
-          onClick={() => document.getElementById('trajectory')?.scrollIntoView({ behavior: 'smooth' })}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.95 }}
-        >
-          See my work ↓
-        </motion.button>
       </div>
     </section>
   )
