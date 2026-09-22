@@ -15,7 +15,7 @@ export default function Contact() {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <span className="section-num">04</span>
+        <span className="section-num">05</span>
         <h2 className="contact-heading">Let's work together.</h2>
         <p className="contact-sub">
           Open to senior engineering and technical leadership roles.<br />

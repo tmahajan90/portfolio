@@ -4,28 +4,40 @@ import './Substrate.css'
 
 const STACK = [
   {
-    category: 'Backend',
-    items: ['Ruby on Rails', 'Node.js', 'REST APIs', 'GraphQL', 'Sidekiq', 'Puma', 'Passenger'],
+    category: 'Languages & Frameworks',
+    items: ['Ruby on Rails', 'Angular', 'React', 'JavaScript', 'TypeScript', 'HTML5 / CSS3'],
   },
   {
-    category: 'Frontend',
-    items: ['Angular', 'TypeScript', 'JavaScript', 'RxJS', 'HTML5 / CSS3', 'React'],
+    category: 'APIs & Architecture',
+    items: ['GraphQL', 'REST / SOAP Web Services', 'Microservices', 'JSON-API', 'API Design & Integration'],
   },
   {
-    category: 'Data & Messaging',
-    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Kafka', 'RabbitMQ', 'Redis Pub/Sub'],
+    category: 'Databases',
+    items: ['PostgreSQL', 'MySQL', 'MongoDB'],
   },
   {
-    category: 'Cloud & Infrastructure',
-    items: ['AWS', 'Docker', 'Kubernetes', 'CI/CD Pipelines', 'GitLab', 'Azure DevOps'],
+    category: 'Messaging & Caching',
+    items: ['Kafka', 'RabbitMQ', 'Redis Pub/Sub', 'Redis'],
   },
   {
-    category: 'Testing & Tooling',
-    items: ['RSpec', 'Postman', 'Git', 'Jira', 'Confluence', 'New Relic'],
+    category: 'Cloud & DevOps',
+    items: ['AWS', 'Docker', 'CI/CD Pipelines', 'GitLab', 'Azure DevOps', 'Git'],
   },
   {
-    category: 'Architecture',
-    items: ['Microservices', 'Event-Driven', 'Domain-Driven Design', 'SOLID', 'TDD / BDD'],
+    category: 'Testing & Quality',
+    items: ['RSpec (Unit, Integration, API)', 'Postman Automated API Testing', 'TDD / BDD', 'Code Reviews'],
+  },
+  {
+    category: 'App Servers',
+    items: ['Puma', 'Passenger (Phusion)', 'WEBrick'],
+  },
+  {
+    category: 'Tools & Platforms',
+    items: ['Jira', 'Confluence', 'Agile / Scrum', 'Devise', 'Paperclip', 'Sidekiq'],
+  },
+  {
+    category: 'Core Competencies',
+    items: ['Full-Stack Development', 'Software Architecture & Design', 'Performance Optimisation', 'Team Leadership & Mentoring', 'Cross-Functional Collaboration', 'Change Management'],
   },
 ]
 

@@ -64,7 +64,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Technical Lead · Full-Stack Engineer · 11+ years
+          Technical Lead · Full-Stack Engineer · 12+ Years Experience
         </motion.div>
 
         <motion.h1
@@ -82,7 +82,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.55 }}
         >
-          I build the systems that connect teams, data, and products.
+          Accomplished Technical Lead specialising in Ruby on Rails, Angular, Microservices, and Cloud Architecture — building scalable, high-performance systems.
         </motion.p>
 
         <motion.div
@@ -91,7 +91,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.75 }}
         >
-          {['Ruby on Rails', 'Angular', 'AWS', 'Microservices', 'Team Lead'].map(tag => (
+          {['Ruby on Rails', 'Angular', 'Microservices', 'AWS', 'GraphQL', 'Docker', 'Team Lead'].map(tag => (
             <span key={tag} className="tag">{tag}</span>
           ))}
         </motion.div>

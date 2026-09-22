@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Trajectory from './components/Trajectory'
 import Systems from './components/Systems'
 import Substrate from './components/Substrate'
+import Provenance from './components/Provenance'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './styles/App.css'
@@ -13,7 +14,8 @@ const SECTIONS = [
   { id: 'trajectory', label: '01 Trajectory' },
   { id: 'systems',    label: '02 Systems' },
   { id: 'substrate',  label: '03 Substrate' },
-  { id: 'contact',    label: '04 Channel' },
+  { id: 'provenance', label: '04 Provenance' },
+  { id: 'contact',    label: '05 Channel' },
 ]
 
 export default function App() {
@@ -41,6 +43,7 @@ export default function App() {
         <Trajectory />
         <Systems />
         <Substrate />
+        <Provenance />
         <Contact />
       </main>
       <Footer />

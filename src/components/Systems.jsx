@@ -5,30 +5,48 @@ import './Systems.css'
 const PROJECTS = [
   {
     num: '01',
-    title: 'Marketing Suite Platform',
-    tag: 'Microservices · SaaS · Team Lead',
+    title: 'Marketing Suite — Mindbody Online',
+    tag: 'Microservices · SaaS · Technical Lead',
     year: '2023 – Present',
-    what: 'Led the engineering of Mindbody\'s Marketing Suite — a set of interconnected microservices handling email campaigns, marketing automations, smart contact lists, and performance analytics for tens of thousands of fitness and wellness businesses globally.',
-    hard: 'The hard part was maintaining reliability across service boundaries while shipping new features at speed. Managing a distributed team of 10, aligning with product and design, and reducing technical debt without slowing delivery required constant prioritisation.',
-    stack: ['Ruby on Rails', 'Angular', 'Kafka', 'Redis', 'AWS', 'Docker', 'PostgreSQL'],
+    what: 'Spearheaded the design and delivery of Mindbody\'s Marketing Suite — a set of microservices powering email campaigns, marketing automations, smart contact lists, and performance analytics for tens of thousands of wellness and fitness businesses globally. Led a cross-functional team of up to 10 engineers delivering rapid, reliable releases.',
+    hard: 'Coordinating zero-downtime AWS migration in a live production system while simultaneously shipping new features was the central challenge. Sequencing service cutovers, maintaining deployment reliability, and keeping team velocity high required meticulous planning and strong process discipline.',
+    stack: ['Ruby on Rails', 'Redis', 'Microservices', 'JSON-API', 'Devise', 'AWS', 'Docker', 'CI/CD'],
   },
   {
     num: '02',
-    title: 'AWS Cloud Migration',
-    tag: 'Infrastructure · DevOps · Architecture',
-    year: '2023',
-    what: 'Led a full migration of application infrastructure to AWS — spanning compute, storage, networking, and CI/CD pipelines. The move improved deployment reliability and enabled the team to ship with confidence using blue-green deployments and automated rollbacks.',
-    hard: 'Zero-downtime migration with live production traffic was the core constraint. Sequencing service cutovers, updating all cross-service connection strings, and keeping the team informed without creating anxiety took as much planning as the technical work itself.',
-    stack: ['AWS', 'Docker', 'CI/CD', 'GitLab', 'Azure DevOps', 'Kubernetes'],
+    title: 'moveitpro.com — Movers & Packers Platform',
+    tag: 'Full-Stack · Payments · SaaS',
+    year: '2014 – 2018',
+    what: 'Led creation of a robust SaaS platform for moving companies — streamlining sales pipelines, job management, and customer interactions. Integrated PayPal and Authorize.net for secure payment processing, implemented Twilio chat for real-time customer communications, and built PDF generation and e-commerce features using Prawn and Spree.',
+    hard: 'Building reliable payment flows across two providers (PayPal + Authorize.net) with consistent error handling and reconciliation was the most critical piece. Ensuring the Twilio chat integration held up under concurrent sessions without dropped messages required careful queue management.',
+    stack: ['Rails 3–5', 'MySQL', 'jQuery', 'Twilio', 'PayPal', 'Authorize.net', 'AWS', 'Prawn', 'Spree'],
   },
   {
     num: '03',
-    title: 'GraphQL API Layer',
-    tag: 'Full-Stack · API Design · Performance',
+    title: 'NIS — Investment Scheme Platform',
+    tag: 'Migration · Full-Stack · GraphQL',
     year: '2020 – 2023',
-    what: 'Designed and built a GraphQL API layer on top of existing REST services for an investment platform, enabling flexible data fetching for the Angular frontend and significantly reducing over-fetching.',
-    hard: 'N+1 query problems became immediately visible once complex nested queries were possible. Implementing dataloader patterns, query depth limits, and cost analysis prevented performance regressions while keeping the API useful for the front-end team.',
-    stack: ['Ruby on Rails', 'GraphQL', 'Angular', 'PostgreSQL', 'RSpec', 'Postman'],
+    what: 'Spearheaded the migration of a legacy Windows desktop application to a modern web platform for an investment scheme management product. Built the full stack using Ruby on Rails for the backend and Angular 13 for the frontend, with a GraphQL API layer enabling flexible data access. Applied Angular lazy loading to optimize performance and resource management.',
+    hard: 'Migrating a legacy Windows application with years of business logic baked in required careful reverse-engineering of requirements before writing a line of new code. Keeping feature parity while modernising the architecture and collaborating directly with clients on evolving requirements was the hardest part.',
+    stack: ['Ruby on Rails', 'Angular 13', 'GraphQL', 'Devise', 'Paperclip', 'PostgreSQL'],
+  },
+  {
+    num: '04',
+    title: 'Arya — EHR System',
+    tag: 'Healthcare · Full-Stack · RoR',
+    year: '2019 – 2020',
+    what: 'Delivered a comprehensive Electronic Health Records system covering patient data management, appointment scheduling, e-prescribing, and medical billing. Designed to be affordable and accessible for healthcare providers of all sizes, with an intuitive interface that required minimal training.',
+    hard: 'Healthcare data is inherently sensitive and complex — correctly modelling patient records, prescriptions, and billing in a way that matched clinical workflows (not just technical convenience) required close collaboration with domain experts and a lot of iteration on the data model.',
+    stack: ['Ruby on Rails', 'Angular', 'REST APIs', 'MySQL'],
+  },
+  {
+    num: '05',
+    title: 'Health Tree — Patient Research Platform',
+    tag: 'Healthcare · Patient-Driven · APIs',
+    year: '2018 – 2019',
+    what: 'Built a patient-driven research platform empowering multiple myeloma patients with real-time treatment options for informed physician discussions. Equipped community providers with up-to-date myeloma treatment insights and delivered a personalised treatment decision tool bridging patients and healthcare professionals.',
+    hard: 'The hardest problem was surfacing the right treatment data at the right time — the platform needed to aggregate clinical and community data and present it in a way that was actionable for patients without being overwhelming or medically misleading.',
+    stack: ['Ruby on Rails', 'React', 'REST APIs', 'PostgreSQL'],
   },
 ]
 
@@ -43,7 +61,7 @@ function ProjectCard({ p, index }) {
       className="project-card"
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
     >
       <button className="project-toggle" onClick={() => setOpen(o => !o)}>
         <div className="project-top">
@@ -98,7 +116,7 @@ export default function Systems() {
         transition={{ duration: 0.5 }}
       >
         <span className="section-num">02</span>
-        <h2>Three systems,<br />and what was hard about each.</h2>
+        <h2>Five systems,<br />and what was hard about each.</h2>
       </motion.div>
 
       <div className="projects-list">

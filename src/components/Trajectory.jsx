@@ -4,44 +4,44 @@ import './Trajectory.css'
 
 const ROLES = [
   {
-    period: '2023 — Present',
-    role: 'Technical Lead',
+    period: 'Aug 2023 — Present',
+    role: 'Technical Lead / Lead Full-Stack Engineer',
     company: 'Encora · Mindbody Online',
-    location: 'Remote',
-    desc: 'Leading a cross-functional team of 10 engineers on the Marketing Suite microservices platform — campaigns, automations, smart lists, and contact management for a global wellness & fitness SaaS serving millions of users.',
-    stack: ['Ruby on Rails', 'Angular', 'Kafka', 'AWS', 'Docker'],
+    location: 'Bangalore (Remote)',
+    desc: 'Leading the design and delivery of the Marketing Suite platform for Mindbody Online — a global wellness & fitness SaaS. Spearheads feature development, leads Ruby version upgrades, conducts code reviews, and manages a cross-functional team of up to 10 engineers. Led a seamless, zero-downtime end-to-end AWS migration and introduced proactive monitoring that reduced incident resolution times and improved 24/7 uptime.',
+    stack: ['Ruby on Rails', 'Redis', 'Microservices', 'JSON-API', 'Devise', 'AWS', 'Docker'],
   },
   {
-    period: '2020 — 2023',
-    role: 'Senior Full-Stack Engineer',
-    company: 'Covalience India',
-    location: 'Remote',
-    desc: 'Built and maintained full-stack features across investment platforms and healthcare applications using Ruby on Rails, Angular, and GraphQL. Led API design, mentored junior engineers, and drove testing practices.',
-    stack: ['Ruby on Rails', 'Angular', 'GraphQL', 'PostgreSQL', 'RSpec'],
-  },
-  {
-    period: '2019 — 2020',
-    role: 'Ruby on Rails Developer',
-    company: 'Antier Solutions',
-    location: 'Chandigarh',
-    desc: 'Developed backend services and REST APIs for fintech and blockchain-adjacent products. Contributed to system architecture and performance optimisation.',
-    stack: ['Ruby on Rails', 'MySQL', 'Redis', 'REST APIs'],
-  },
-  {
-    period: '2018 — 2019',
-    role: 'Rails Developer',
-    company: 'Smart Data Enterprises',
+    period: 'Apr 2020 — Aug 2023',
+    role: 'Senior Full-Stack Developer',
+    company: 'Covalience India Pvt. Ltd.',
     location: 'Mohali',
-    desc: 'Built and maintained web applications for logistics and moving industry clients, delivering features across the full stack.',
-    stack: ['Ruby on Rails', 'JavaScript', 'PostgreSQL'],
+    desc: 'Delivered three major projects: NIS (investment scheme platform migrated from legacy Windows to web using RoR + Angular 13 + GraphQL), a Medical Equipment Planning System (Angular 9→15 upgrade + RoR GraphQL APIs), and Trendency (BI platform migration from legacy Windows using Angular + .NET + GraphQL). Collaborated directly with clients and directed projects from concept to deployment.',
+    stack: ['Ruby on Rails', 'Angular 13', 'GraphQL', 'Devise', 'Paperclip', '.NET'],
   },
   {
-    period: '2014 — 2018',
+    period: 'Aug 2019 — Apr 2020',
     role: 'Ruby on Rails Developer',
-    company: 'SkyAch Software',
-    location: 'Punjab',
-    desc: 'Started professional career building web applications from scratch. Grew from junior to mid-level developer, mastering Rails patterns, test-driven development, and agile workflows.',
-    stack: ['Ruby on Rails', 'jQuery', 'MySQL', 'RSpec'],
+    company: 'Antier Solutions Pvt. Ltd.',
+    location: 'Mohali',
+    desc: 'Built Arya — a comprehensive EHR system covering patient data, appointments, e-prescribing, and medical billing. Designed an intuitive interface optimising clinical workflow efficiency and streamlined healthcare operations to improve patient care.',
+    stack: ['Ruby on Rails', 'Angular', 'REST APIs', 'MySQL'],
+  },
+  {
+    period: 'Jul 2018 — Mar 2019',
+    role: 'Ruby on Rails Developer',
+    company: 'Smart Data Enterprises Inc.',
+    location: 'Mohali',
+    desc: 'Built Health Tree — a patient-driven research platform empowering multiple myeloma patients with real-time treatment options. Equipped community healthcare providers with up-to-date myeloma treatment insights and launched a personalized treatment decision tool.',
+    stack: ['Ruby on Rails', 'React', 'REST APIs', 'PostgreSQL'],
+  },
+  {
+    period: 'Sep 2014 — Jun 2018',
+    role: 'Ruby on Rails Developer',
+    company: 'SkyAch Software Solutions Pvt. Ltd.',
+    location: 'Mohali',
+    desc: 'Delivered multiple platforms including moveitpro.com (moving company SaaS with PayPal/Authorize.net payments and Twilio chat), a Lead Assignment & Maintenance System for financial advisors, and a Doctor & Patient Appointment Booking System. Grew from junior to mid-level engineer across 4 years mastering Rails, TDD, and Agile practices.',
+    stack: ['Rails 3–5', 'MySQL', 'jQuery', 'Twilio', 'PayPal', 'AWS', 'Spree', 'Devise'],
   },
 ]
 
@@ -88,7 +88,7 @@ export default function Trajectory() {
       >
         <span className="section-num">01</span>
         <h2>Where I am now,<br />and how I got here.</h2>
-        <p className="section-sub">Now ————— 2014</p>
+        <p className="section-sub">Present ————— 2014</p>
       </motion.div>
 
       <div className="timeline">
