@@ -1,0 +1,78 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+
+.nav-logo-t {
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+
+.nav-logo-name {
+  color: var(--white);
+}
+
+.nav nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.nav nav button {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav nav button:hover,
+.nav nav button.active {
+  color: var(--white);
+  background: rgba(255,255,255,0.06);
+}
+
+.nav-resume {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-resume:hover {
+  color: var(--white);
+  border-color: rgba(255,255,255,0.25);
+}
+
+@media (max-width: 768px) {
+  .nav nav {
+    display: none;
+  }
+  .nav {
+    padding: 1rem 1.25rem;
+  }
+}
