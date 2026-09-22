@@ -55,6 +55,26 @@ const PROJECTS = [
     hard: 'The hardest problem was surfacing the right treatment data at the right time — the platform needed to aggregate clinical and community data and present it in a way that was actionable for patients without being overwhelming or medically misleading.',
     stack: ['Ruby on Rails', 'React', 'REST APIs', 'PostgreSQL'],
   },
+  {
+    num: '06',
+    title: 'Easy Prime — Inventory Management SaaS',
+    tag: 'Personal Product · Multi-tenant · SaaS',
+    url: 'https://easy-prime.com',
+    year: 'Aug 2026 – Present',
+    what: 'Building a multi-tenant inventory management platform for small-to-medium businesses worldwide. Covers multi-warehouse stock, purchase orders, sales orders, batch tracking with expiry alerts, role-based access (5 roles), a global search engine, reports, HR module, and a super-admin portal with subscription/trial billing.',
+    hard: 'Designing the multi-tenancy architecture — org-scoped routing, per-tenant SMTP, and granular Pundit policies — while keeping the codebase clean and the feature surface wide was the central challenge. FEFO batch allocation for sales and thread-safe per-request email config required careful thought.',
+    stack: ['Rails 8', 'PostgreSQL', 'Hotwire', 'Tailwind CSS', 'Sidekiq', 'Redis', 'Pundit', 'AASM', 'PaperTrail'],
+  },
+  {
+    num: '07',
+    title: 'Pathankot Seva — Hyperlocal Marketplace',
+    tag: 'Personal Product · Community · Rails + React Native',
+    url: 'https://pathankotseva.in',
+    year: 'Aug 2026 – Present',
+    what: 'Building a hyperlocal digital platform to connect buyers, sellers, and service providers in Pathankot and the surrounding region — giving local businesses a digital storefront and discovery engine while keeping economic activity rooted in the local community. Designed as a Rails 8 modular monolith with a React Native mobile app (planned).',
+    hard: 'Architecting a modular monolith that serves both a Hotwire web interface and a versioned JSON API for the mobile app — without fragmenting into a premature microservices split — required deliberate boundary design from day one. Balancing a broad roadmap (geolocation, real-time chat, payments) against a solid Phase 1 foundation is the ongoing challenge.',
+    stack: ['Rails 8', 'PostgreSQL', 'Hotwire', 'Tailwind CSS', 'React Native', 'Sidekiq', 'Redis', 'Docker', 'Kamal'],
+  },
 ]
 
 function ProjectCard({ p, index }) {
@@ -95,6 +115,11 @@ function ProjectCard({ p, index }) {
               <div className="project-stack">
                 {p.stack.map(t => <span key={t} className="tag">{t}</span>)}
               </div>
+              {p.url && (
+                <a className="project-url" href={p.url} target="_blank" rel="noopener noreferrer">
+                  Visit site ↗
+                </a>
+              )}
             </div>
           </motion.div>
         )}
@@ -111,7 +136,7 @@ export default function Systems() {
         {...fadeUp()}
       >
         <span className="section-num">02</span>
-        <h2>Five systems,<br />and what was hard about each.</h2>
+        <h2>Seven systems,<br />and what was hard about each.</h2>
       </motion.div>
 
       <div className="projects-list">
