@@ -44,7 +44,7 @@ export default function Nav({ sections, active }) {
         </a>
         <a
           className="nav-link nav-link-accent"
-          href="/portfolio/resume.pdf"
+          href="https://drive.google.com/file/d/1_apsFDGgfQfR9w3_vjV8GldqK5Lfsrce/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >

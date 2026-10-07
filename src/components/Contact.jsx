@@ -33,7 +33,7 @@ export default function Contact() {
           <a href="https://github.com/tmahajan90" target="_blank" rel="noopener noreferrer">
             GitHub ↗
           </a>
-          <a href="/portfolio/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/file/d/1_apsFDGgfQfR9w3_vjV8GldqK5Lfsrce/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             Résumé ↗
           </a>
         </div>
